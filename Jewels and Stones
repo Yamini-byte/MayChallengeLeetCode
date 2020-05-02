@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        vector<char> Jewel(J.begin(),J.end());
+        vector<char> Stones(S.begin(),S.end());
+        int count=0;
+        
+        for(auto i=Jewel.begin();i<Jewel.end();i++){
+            for(auto j=Stones.begin();j<Stones.end();j++){
+                if(*i==*j){
+                    count ++;
+                }
+            }
+        }
+        return(count);
+    }
+};
